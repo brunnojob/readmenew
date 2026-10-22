@@ -235,13 +235,13 @@ Checkout, catalog, inventory, cash control and role-based operations.
 
 ## V. Evidence Locker
 
-<sub>Sealed case files. Open one.</sub>
+<sub>Project screenshots and bench photos. Open a case to view the original images.</sub>
 
 <details>
 <summary><b>CASE #01 — RF Solutions × Stone — POS System</b></summary>
 <br>
 <p align="center">
-  <img src="assets/projects/stone-pos-system.jpeg" width="360" alt="RF Solutions and Stone POS system" />
+  <a href="assets/projects/stone-pos-system.png"><img src="assets/projects/stone-pos-system.png" width="360" alt="Stone terminal showing RF Solutions in the application store" /></a>
 </p>
 </details>
 
@@ -249,20 +249,42 @@ Checkout, catalog, inventory, cash control and role-based operations.
 <summary><b>CASE #02 — OFS — Offshore Fleet POB Platform</b></summary>
 <br>
 <p align="center">
-  <img src="assets/projects/ofs-fleet-dashboard.jpg" width="49%" alt="OFS offshore fleet dashboard" />
-  <img src="assets/projects/ofs-fleet-platform.jpg" width="49%" alt="OFS offshore safety platform" />
+  <a href="assets/projects/ofs-fleet-dashboard.jpg"><img src="assets/projects/ofs-fleet-dashboard.jpg" width="100%" alt="OFS dashboard with personnel on board, fire drill history and lifeboat status" /></a>
 </p>
 </details>
 
 <details>
-<summary><b>CASE #03 — Arduino Telemetry</b></summary>
+<summary><b>CASE #03 — Arduino / ESP32 Telemetry</b></summary>
 <br>
+
+**Device output — ESP32 serial monitor**
+
 <p align="center">
-  <img src="assets/projects/arduino-telemetry-code-1.jpg" width="49%" alt="Arduino telemetry code" />
-  <img src="assets/projects/arduino-telemetry-code-2.jpg" width="49%" alt="Arduino telemetry serial processing" />
-  <img src="assets/projects/arduino-telemetry-chart.jpg" width="49%" alt="Real-time Arduino telemetry chart" />
-  <img src="assets/projects/arduino-telemetry-data.jpg" width="49%" alt="Arduino sensor telemetry data" />
-  <img src="assets/projects/arduino-telemetry-events.jpg" width="80%" alt="Arduino telemetry events" />
+  <a href="assets/projects/iot-esp32-serial.jpg"><img src="assets/projects/iot-esp32-serial.jpg" width="100%" alt="ESP32 serial monitor publishing temperature, humidity and presence readings" /></a>
+</p>
+
+**Python bridge — MQTT messages received**
+
+<p align="center">
+  <a href="assets/projects/iot-python-mqtt.jpg"><img src="assets/projects/iot-python-mqtt.jpg" width="100%" alt="Python MQTT bridge connected to the broker and receiving sensor readings" /></a>
+</p>
+
+**Database — persisted sensor readings**
+
+<p align="center">
+  <a href="assets/projects/iot-supabase-readings.jpg"><img src="assets/projects/iot-supabase-readings.jpg" width="100%" alt="Supabase sensor_readings table with temperature, humidity, presence and timestamps" /></a>
+</p>
+
+**Dashboard — temperature, humidity and inventory**
+
+<p align="center">
+  <a href="assets/projects/iot-dashboard.jpg"><img src="assets/projects/iot-dashboard.jpg" width="100%" alt="Telemetry dashboard with temperature and humidity history, presence and inventory" /></a>
+</p>
+
+**Activity log — inventory movements and recent readings**
+
+<p align="center">
+  <a href="assets/projects/iot-audit-log.jpg"><img src="assets/projects/iot-audit-log.jpg" width="100%" alt="Inventory movements and recent sensor records in the telemetry dashboard" /></a>
 </p>
 </details>
 
@@ -270,9 +292,9 @@ Checkout, catalog, inventory, cash control and role-based operations.
 <summary><b>CASE #04 — Just for Fun</b> · <i>off the record</i></summary>
 <br>
 <p align="center">
-  <img src="assets/projects/just-for-fun-1.jpeg" width="31%" alt="Experimental coding session" />
-  <img src="assets/projects/just-for-fun-2.jpeg" width="31%" alt="Hardware and code experiment" />
-  <img src="assets/projects/just-for-fun-3.jpeg" width="31%" alt="Wearable interface experiment" />
+  <a href="assets/projects/just-for-fun-1.jpeg"><img src="assets/projects/just-for-fun-1.jpeg" width="31%" alt="Personal desk photo with a multi-screen workstation" /></a>
+  <a href="assets/projects/just-for-fun-2.jpeg"><img src="assets/projects/just-for-fun-2.jpeg" width="31%" alt="Sensor, breadboard, relay and pump experiment on the workbench" /></a>
+  <a href="assets/projects/just-for-fun-3.jpeg"><img src="assets/projects/just-for-fun-3.jpeg" width="31%" alt="RF WALLMARKET application running locally during a development session" /></a>
 </p>
 </details>
 
@@ -323,15 +345,13 @@ Checkout, catalog, inventory, cash control and role-based operations.
 
 [![Executable proof](https://github.com/brunnojob/brunnojob/actions/workflows/proof.yml/badge.svg)](https://github.com/brunnojob/brunnojob/actions/workflows/proof.yml)
 
-![Recorded program execution](docs/proof/execution.svg)
-
-[Verified run](https://github.com/brunnojob/brunnojob/actions/runs/38018340176) · [Execution report](docs/proof/evidence.json) · [Verified execution index](docs/proof/INDEX.md)
+[Verified run](https://github.com/brunnojob/brunnojob/actions/runs/38018340176) · [Execution report](https://github.com/brunnojob/brunnojob/blob/main/docs/proof/evidence.json) · [Verified execution index](https://github.com/brunnojob/brunnojob/blob/main/docs/proof/INDEX.md)
 
 <details>
 <summary><b>How to reproduce the take</b></summary>
 <br>
 
-Run `python .proof/record.py` after installing the prerequisites above. The scenarios execute repository code and verify exit codes and expected output. CI publishes `execution-proof` with the transcript, input fingerprints and source commit. The downloadable report identifies the exact tested version; the workflow badge tracks the latest run.
+Run `python .proof/record.py` with the prerequisites listed in the execution index. The scenarios execute repository code and verify exit codes and expected output. CI publishes `execution-proof` with the transcript, input fingerprints and source commit. The downloadable report identifies the exact tested version; the workflow badge tracks the latest run.
 
 </details>
 
